@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Illuminated Images</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="css/illuminatedimages.css" type="text/css">
+<style>
+
+/*change the color name below to the color you want initially applied to the button. ie:blue*/
+
+.button{font-family: verdana, arial, helvetica; font-size: 8pt; font-weight:bold;color:ffffff;background-color:6B99B3}
+//-->
+</style>
+<style>
+scroll {
+scrollbar-face-color: #096699;
+scrollbar-arrow-color: #FFFFFF;
+scrollbar-base-color: #096699;
+scrollbar-track-color: #096699;
+</style>
+
+<script language = "JavaScript">
+if (1) 
+{   		
+           but1on=new Image(); but1on.src="images/home_but2.gif";   
+           but1off=new Image(); but1off.src="images/home_but.gif"; 
+		   but2on=new Image(); but2on.src="images/profile_but2.gif";   
+           but2off=new Image(); but2off.src="images/profile_but.gif"; 
+		   but3on=new Image(); but3on.src="images/portfolio_but2.gif";   
+           but3off=new Image(); but3off.src="images/portfolio_but.gif";
+		   but4on=new Image(); but4on.src="images/contact_but2.gif";   
+           but4off=new Image(); but4off.src="images/contact_but.gif";
+		   
+			
+}
+
+function imgRoll(imgName,flag) 
+{
+      
+        document.images[imgName].src = eval(imgName+flag+".src");
+    
+		return;
+}
+</script>
+<style type="text/css">
+
+
+td.stretchleft
+{ 
+	background-image: url(images/stretch_left.gif);
+	background-repeat: no-repeat;
+	background-color: #005DB9;
+}
+td.stretchright
+{ 
+	background-image: url(images/stretch_right.gif);
+	background-repeat: no-repeat;
+	background-color: #005DB9;
+}
+
+</style>
+<SCRIPT LANGUAGE="JavaScript">
+// declare global variable name
+var newWindow = null
+function makeNewWindow() {
+// check if window already exists
+	if (!newWindow || newWindow.closed) {
+// store new window object in global variable
+	newWindow = window.open("contact_form.htm","cc","toolbar=0,location=0,directories=0,status=1,menubar=0,scrollbars=0,resizable=0,width=400,height=222")
+// open new window document
+	//newWindow.document.write()
+	//newWindow.document.close()
+} else {
+// window already exists, so bring it forward
+	newWindow.focus()
+	}
+}
+
+</script>
+	
+</head>
+
+<body bgcolor="#E8E8E8" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+
+<table cellpadding="0" cellspacing="0" border="0" align="center" valign="middle" bgcolor="#E8E8E8" width="100%" height="100%">
+	<tr>
+		<td width="100%" align="center">
+		<table cellpadding="0" cellspacing="0" border="0">
+		<tr>
+		<td width="50%" align="center">
+		<div align="center">
+		<table width=100% border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		<td background="images/stretch_left.gif" width="100%"><img src="images/spacer.gif" width="1" height="417" border="0" alt=""></td>
+		</tr>
+		</table> 
+		</div>
+		</td> 
+		<td>
+		<div> 
+		<table cellpadding="0" cellspacing="0" border="0" width="785" height="417">
+		<tr>
+			<td colspan="5"><img src="images/top.gif" width="785" height="35" border="0" alt=""></td>
+		</tr>
+		<tr>
+			<td><img src="images/contact_side_nav.jpg" width="524" height="26" border="0" alt=""></td>
+			<td><A HREF="index.htm" onMouseOver="imgRoll('but1','on')" onMouseOut="imgRoll('but1','off')"><img src="images/home_but.gif" width="50" height="26" border="0" alt="Home" name="but1"></td>
+			<td><A HREF="profile.htm" onMouseOver="imgRoll('but2','on')" onMouseOut="imgRoll('but2','off')"><img src="images/profile_but.gif" width="60" height="26" border="0" alt="Profile" name="but2"></td>
+			<td><A HREF="portfolio.htm" onMouseOver="imgRoll('but3','on')" onMouseOut="imgRoll('but3','off')"><img src="images/portfolio_but.gif" width="70" height="26" border="0" alt="Portfolio" name="but3"></td>
+			<td><A HREF="contact.htm"><img src="images/contact_but2.gif" width="81" height="26" border="0" alt="Contact" name="but4"></td>
+		</tr>
+		<tr>
+			<td colspan="5"> 
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td><img src="images/contact_photo1.jpg" width="301" height="207" border="0" alt=""></td>
+						</tr>
+						<tr>
+							<td><img src="images/contact_logo.jpg" width="301" height="67" border="0" alt=""></td>
+						</tr>
+						<tr>
+							<td><img src="images/logo1a.gif" width="301" height="82" border="0" alt=""></td>
+						</tr>
+					</table>
+				</td>
+				<td>
+			
+					<table cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td>
+						
+						
+					<!--Profile Body-->
+					<table cellpadding="0" cellspacing="0" border="0" bgcolor="#000000" width="484" height="">
+					<tr>
+						<td colspan="4"><img src="images/body_top.gif" width="484" height="7" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td rowspan="2"><img src="images/body_left.gif" width="18" height="252" border="0" alt=""></td>
+						<td><img src="images/title_contact.gif" width="255" height="30" border="0" alt=""></td>
+						<td><img src="images/title_right.gif" width="193" height="30" border="0" alt=""></td>
+						<td rowspan="2"><img src="images/body_right.gif" width="18" height="252" border="0" alt=""></td>
+					</tr>
+					<tr>
+						<td colspan="2" valign="top">
+
+<table cellpadding="0" cellspacing="0" border="0" align="center" background="images/body_table.gif" width="448" height="222">
+							<tr>
+								<td class="white" valign="top" align="center"><img src="images/spacer.gif" width="1" height="15" border="0" alt=""><br><b>Illuminated Images</b><br>phone. 203.265.0452<br>email. <a href="mailto:illuminatedimages1@gmail.com" class="email">illuminatedimages1@gmail.com</a><br><img src="images/spacer.gif" width="1" height="15" border="0" alt=""><br><a href="javascript: makeNewWindow('');" class="bold"><b>&middot Request a Quote &middot</b></a>
+
+</td>
+</tr>
+						</table>
+						
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4"><img src="images/body_bottom.gif" width="484" height="15" border="0" alt=""></td> 
+						
+					</tr>
+					</table>
+					<!--End Profile Body-->
+					
+					
+
+						</td>
+					</tr>
+					<tr>
+						<td><img src="images/bottom_pattern.gif" width="484" height="82" border="0" alt=""></td>
+					</tr>
+					</table>
+			
+				</td>
+			</tr>
+				
+		</table>
+		</div>
+		</tr>
+	</table>
+	</td>
+	
+		<td width="50%" align="center">
+		<div align="center">
+		<table width=100% border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		<td background="images/stretch_right.gif" width="100%"><img src="images/spacer.gif" width="1" height="417" border="0" alt=""></td>
+		</tr>
+		</table> 
+		</div>
+	</td>
+	</tr>
+	
+	<tr>
+		<td align="right" class="gray" colspan="5" valign="top">©2000-2009 Illuminated Images&nbsp;<br>All Rights Reserved&nbsp;</td> 
+	 
+</tr> 
+</table>   
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,308 @@
+<!--- <script language="JavaScript1.2">
+
+/*
+Conveyor belt slideshow script- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, 100's more DHTML scripts, and Terms Of Use, visit dynamicdrive.com
+*/
+
+
+//Specify the slider's width (in pixels)
+var sliderwidth="329px"
+//Specify the slider's height
+var sliderheight="85px"
+//Specify the slider's slide speed (larger is faster 1-10)
+var slidespeed=2
+//configure background color:
+slidebgcolor="#085580"
+
+//Specify the slider's images
+var leftrightslide=new Array()
+var finalslide=''
+leftrightslide[0]='<a href="http://"><img src="images/images_portfolio/thumb_sbc.jpg" border=0></a>'
+leftrightslide[1]='<a href="http://"><img src="images/images_portfolio/thumb_platinumplus.jpg" border=0></a>'
+leftrightslide[2]='<a href="http://"><img src="images/images_portfolio/thumb_df.jpg" border=0></a>'
+leftrightslide[3]='<a href="http://"><img src="images/images_portfolio/thumb_rythm.jpg" border=0></a>'
+leftrightslide[4]='<a href="http://"><img src="images/images_portfolio/thumb_sideproject.jpg" border=0></a>'
+leftrightslide[5]='<a href="http://"><img src="images/images_portfolio/thumb_acoustica.jpg" border=0></a>'
+leftrightslide[6]='<a href="http://"><img src="images/images_portfolio/thumb_intranet.jpg" border=0></a>'
+leftrightslide[7]='<a href="http://"><img src="images/images_portfolio/thumb_solepotion.jpg" border=0></a>'
+leftrightslide[8]='<a href="http://"><img src="images/images_portfolio/thumb_marines.jpg" border=0></a>'
+leftrightslide[9]='<a href="http://"><img src="images/images_portfolio/thumb_infomall.jpg" border=0></a>'
+leftrightslide[10]='<a href="http://"><img src="images/images_portfolio/thumb_premier.jpg" border=0></a>'
+leftrightslide[11]='<a href="http://"><img src="images/images_portfolio/thumb_pbs.jpg" border=0></a>'
+leftrightslide[12]='<a href="http://"><img src="images/images_portfolio/thumb_hand.jpg" border=0></a>'
+
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+
+var copyspeed=slidespeed
+leftrightslide='<nobr>'+leftrightslide.join(" ")+'</nobr>'
+var iedom=document.all||document.getElementById
+if (iedom)
+document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+leftrightslide+'</span>')
+var actualwidth=''
+var cross_slide, ns_slide
+
+function fillup(){
+if (iedom){
+cross_slide=document.getElementById? document.getElementById("test2") : document.all.test2
+cross_slide2=document.getElementById? document.getElementById("test3") : document.all.test3
+cross_slide.innerHTML=cross_slide2.innerHTML=leftrightslide
+actualwidth=document.all? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
+cross_slide2.style.left=actualwidth+20+"px"
+}
+else if (document.layers){
+ns_slide=document.ns_slidemenu.document.ns_slidemenu2
+ns_slide2=document.ns_slidemenu.document.ns_slidemenu3
+ns_slide.document.write(leftrightslide)
+ns_slide.document.close()
+actualwidth=ns_slide.document.width
+ns_slide2.left=actualwidth+20
+ns_slide2.document.write(leftrightslide)
+ns_slide2.document.close()
+}
+lefttime=setInterval("slideleft()",30)
+}
+window.onload=fillup
+
+function slideleft(){
+if (iedom){
+if (parseInt(cross_slide.style.left)>(actualwidth*(-1)+8))
+cross_slide.style.left=parseInt(cross_slide.style.left)-copyspeed+"px"
+else
+cross_slide.style.left=parseInt(cross_slide2.style.left)+actualwidth+30+"px"
+
+if (parseInt(cross_slide2.style.left)>(actualwidth*(-1)+8))
+cross_slide2.style.left=parseInt(cross_slide2.style.left)-copyspeed+"px"
+else
+cross_slide2.style.left=parseInt(cross_slide.style.left)+actualwidth+30+"px"
+
+}
+else if (document.layers){
+if (ns_slide.left>(actualwidth*(-1)+8))
+ns_slide.left-=copyspeed
+else
+ns_slide.left=ns_slide2.left+actualwidth+30
+
+if (ns_slide2.left>(actualwidth*(-1)+8))
+ns_slide2.left-=copyspeed
+else
+ns_slide2.left=ns_slide.left+actualwidth+30
+}
+}
+
+
+if (iedom||document.layers){
+with (document){
+document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+if (iedom){
+write('<div style="position:relative;width:'+sliderwidth+';height:'+sliderheight+';overflow:hidden">')
+write('<div style="position:absolute;width:'+sliderwidth+';height:'+sliderheight+';background-color:'+slidebgcolor+'" onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed">')
+write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
+write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
+write('</div></div>')
+}
+else if (document.layers){
+write('<ilayer width='+sliderwidth+' height='+sliderheight+' name="ns_slidemenu" bgColor='+slidebgcolor+'>')
+write('<layer name="ns_slidemenu2" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+write('<layer name="ns_slidemenu3" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+write('</ilayer>')
+}
+document.write('</td></table>')
+}
+}
+</script>
+
+<!--- <p align="center"><font face="Arial" size="-2">Free DHTML scripts provided by<br>
+<a href="http://dynamicdrive.com">Dynamic Drive</a></font></p> --->
+
+
+
+
+
+<script type="text/javascript">
+
+/***********************************************
+* Scrollable Menu Links- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+//configure path for left and right arrows
+var goleftimage='pointer2.gif'
+var gorightimage='pointer.gif'
+//configure menu width (in px):
+var menuwidth=300
+//configure menu height (in px):
+var menuheight=25
+//Specify scroll buttons directions ("normal" or "reverse"):
+var scrolldir="normal"
+//configure scroll speed (1-10), where larger is faster
+var scrollspeed=6
+//specify menu content
+var menucontents='<nobr><a href="http://www.dynamicdrive.com">Dynamic Drive</a> | <a href="http://www.javascriptkit.com">JavaScript Kit</a> | <a href="http://www.codingforums.com">CodingForums.com</a> | <a href="http://www.builder.com">Builder.com</a> | <a href="http://freewarejava.com">Freewarejava.com</a></nobr>'
+
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+
+var iedom=document.all||document.getElementById
+var leftdircode='onMouseover="moveleft()" onMouseout="clearTimeout(lefttime)"'
+var rightdircode='onMouseover="moveright()" onMouseout="clearTimeout(righttime)"'
+if (scrolldir=="reverse"){
+var tempswap=leftdircode
+leftdircode=rightdircode
+rightdircode=tempswap
+}
+if (iedom)
+document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100;left:-5000">'+menucontents+'</span>')
+var actualwidth=''
+var cross_scroll, ns_scroll
+var loadedyes=0
+function fillup(){
+if (iedom){
+cross_scroll=document.getElementById? document.getElementById("test2") : document.all.test2
+cross_scroll.innerHTML=menucontents
+actualwidth=document.all? cross_scroll.offsetWidth : document.getElementById("temp").offsetWidth
+}
+else if (document.layers){
+ns_scroll=document.ns_scrollmenu.document.ns_scrollmenu2
+ns_scroll.document.write(menucontents)
+ns_scroll.document.close()
+actualwidth=ns_scroll.document.width
+}
+loadedyes=1
+}
+window.onload=fillup
+
+function moveleft(){
+if (loadedyes){
+if (iedom&&parseInt(cross_scroll.style.left)>(menuwidth-actualwidth)){
+cross_scroll.style.left=parseInt(cross_scroll.style.left)-scrollspeed+"px"
+}
+else if (document.layers&&ns_scroll.left>(menuwidth-actualwidth))
+ns_scroll.left-=scrollspeed
+}
+lefttime=setTimeout("moveleft()",50)
+}
+
+function moveright(){
+if (loadedyes){
+if (iedom&&parseInt(cross_scroll.style.left)<0)
+cross_scroll.style.left=parseInt(cross_scroll.style.left)+scrollspeed+"px"
+else if (document.layers&&ns_scroll.left<0)
+ns_scroll.left+=scrollspeed
+}
+righttime=setTimeout("moveright()",50)
+}
+
+
+if (iedom||document.layers){
+with (document){
+write('<table border="0" cellspacing="0" cellpadding="2">')
+write('<td valign="middle"><a href="#" '+leftdircode+'><img src="'+goleftimage+'"border=0></a> </td>')
+write('<td width="'+menuwidth+'px" valign="top">')
+if (iedom){
+write('<div style="position:relative;width:'+menuwidth+'px;height:'+menuheight+'px;overflow:hidden;">')
+write('<div id="test2" style="position:absolute;left:0;top:0">')
+write('</div></div>')
+}
+else if (document.layers){
+write('<ilayer width='+menuwidth+' height='+menuheight+' name="ns_scrollmenu">')
+write('<layer name="ns_scrollmenu2" left=0 top=0></layer></ilayer>')
+}
+write('</td>')
+write('<td valign="middle"> <a href="#" '+rightdircode+'>')
+write('<img src="'+gorightimage+'"border=0></a>')
+write('</td></table>')
+}
+}
+
+</script>
+ --->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/strict.dtd">		 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Scroll a Relative-Positioned Layer Horizontally</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+@import "style/scroll-rel-h.css";
+</style>
+<script src="src/dw_scroll.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*************************************************************************
+  This code is from Dynamic Web Coding at http://www.dyn-web.com/
+  Copyright 2001-4 by Sharon Paine 
+  See Terms of Use at http://www.dyn-web.com/bus/terms.html
+  regarding conditions under which you may use this code.
+  This notice must be retained in the code as is!
+*************************************************************************/
+
+var wndo = [];
+
+// Necessary to avoid errors before page loaded 
+function dw_startScroll(num, dir, sp) {
+  if ( wndo[num] && wndo[num].startScroll ) wndo[num].startScroll(dir, sp);
+}
+
+function dw_stopScroll(num) {
+  if ( wndo[num] && wndo[num].stopScroll ) wndo[num].stopScroll();
+}
+
+function initScrollLayer() {
+  // arguments: id of layer containing scrolling layers (clipped layer), id of layer to scroll, 
+  // if horizontal scrolling, id of element containing scrolling content (table?)
+  wndo[0] = new dw_scrollLayer('wn', 'lyr1', 't1');
+}
+</script>	
+</head>
+<body onload="initScrollLayer()">
+
+<h1>Horizontal Mouseover Scrolling</h1>
+
+<table class="main" cellspacing="0" cellpadding="6" border="0">
+<tr>
+  <td> </td>
+	<td>
+<!-- scrolling layers -->
+<div id="hold">
+<div id="wn">
+	<div id="lyr1" class="content">
+  <table id="t1" border="0" cellpadding="0" cellspacing="6">
+	 <tr>
+		<td><img src="/images/btns/dwc-w-btn.gif" width="175" height="40" alt="" /></td>
+		<td><img src="/images/btns/dot-com-btn.gif" width="176" height="30" alt="" /></td>
+		<td><img src="/images/btns/slogan-btn.gif" width="132" height="32" alt="" /></td>
+    <td><img src="/images/btns/dwc-w-btn.gif" width="175" height="40" alt="" /></td>
+		<td><img src="/images/btns/dot-com-btn.gif" width="176" height="30" alt="" /></td>
+		<td><img src="/images/btns/slogan-btn.gif" width="132" height="32" alt="" /></td>
+   </tr>
+  </table>
+  </div>
+</div>  <!-- end wn div -->
+</div>	<!-- end hold div -->
+  </td>
+  <td> </td>
+</tr>
+<tr>
+  <td class="spacer"> </td>
+	<td class="arrows"><!-- Scroll links -->
+    <a href="javascript://" onclick="return false" onmouseover="dw_startScroll(0,'left')" onmouseout="dw_stopScroll(0)"><img src="/images/nav/aro-lft.gif" width="19" height="9" alt="" /></a>    
+    <a href="javascript://" onclick="return false" onmouseover="dw_startScroll(0,'right')" onmouseout="dw_stopScroll(0)"><img src="/images/nav/aro-rt.gif" width="19" height="9" alt="" /></a>
+  </td>
+  <td class="spacer"> </td>
+</tr>
+<tr>
+  <td> </td> 
+  <td class="footer"><a href="http://www.dyn-web.com">www.dyn-web.com</a></td>
+  <td> </td>
+</tr>
+</table>
+
+<p> </p>
+<p>See also the <a href="scrollbar-h.html">scrollbar example</a></p>
+
+</body>
+</html>
+
